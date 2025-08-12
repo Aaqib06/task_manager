@@ -1,0 +1,56 @@
+/* public/css/auth.css */
+
+body {
+    background: #f8f9fa;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.register-card {
+    background: #fff;
+    padding: 2rem 2.5rem;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgb(0 0 0 / 0.1);
+    width: 100%;
+    max-width: 420px;
+}
+
+.register-card h2 {
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    color: #343a40;
+}
+
+.form-label {
+    font-weight: 600;
+}
+
+.btn-primary {
+    width: 100%;
+    font-weight: 600;
+    padding: 0.6rem;
+}
+
+.login-link {
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+}
+
+.login-link a {
+    text-decoration: none;
+    color: #0d6efd;
+    font-weight: 600;
+}
+
+.login-link a:hover {
+    text-decoration: underline;
+}
+
+small.text-danger {
+    font-size: 0.85rem;
+}

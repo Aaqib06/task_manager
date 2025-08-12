@@ -1,0 +1,178 @@
+/* admin-panel.css */
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f5f7fa;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+.navbar {
+  background-color: #1a237e;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  box-shadow: 0 2px 6px rgb(0 0 0 / 0.15);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1030;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar .brand {
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: white;
+  text-decoration: none;
+}
+
+.navbar .nav-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.navbar .nav-icon {
+  color: white;
+  font-size: 1.25rem;
+  cursor: pointer;
+  position: relative;
+}
+
+.navbar .nav-icon .badge {
+  position: absolute;
+  top: -6px;
+  right: -8px;
+  background: #ff3d00;
+  color: white;
+  font-size: 0.7rem;
+  padding: 2px 5px;
+  border-radius: 50%;
+}
+
+.sidebar {
+  position: fixed;
+  top: 56px; /* navbar height */
+  left: 0;
+  height: calc(100vh - 56px);
+  width: 260px;
+  background-color: #283593;
+  color: #c5cae9;
+  transition: width 0.3s ease;
+  overflow-y: auto;
+  box-shadow: 2px 0 5px rgb(0 0 0 / 0.1);
+}
+
+.sidebar.collapsed {
+  width: 70px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar ul li {
+  display: flex;
+  align-items: center;
+  padding: 15px 25px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  white-space: nowrap;
+}
+
+.sidebar ul li:hover,
+.sidebar ul li.active {
+  background-color: #3949ab;
+  color: white;
+}
+
+.sidebar ul li i {
+  font-size: 1.2rem;
+  margin-right: 15px;
+}
+
+.sidebar.collapsed ul li span {
+  display: none;
+}
+
+.sidebar ul li a {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.content {
+  margin-left: 260px;
+  padding: 80px 30px 30px 30px;
+  transition: margin-left 0.3s ease;
+}
+
+.content.collapsed {
+  margin-left: 70px;
+}
+
+.card-summary {
+  background: white;
+  padding: 20px 30px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgb(0 0 0 / 0.1);
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.card-summary i {
+  font-size: 2.5rem;
+  color: #3f51b5;
+  flex-shrink: 0;
+}
+
+.card-summary .info {
+  flex-grow: 1;
+}
+
+.card-summary .info h3 {
+  margin: 0;
+  font-weight: 700;
+  font-size: 1.6rem;
+}
+
+.card-summary .info p {
+  margin: 4px 0 0;
+  color: #666;
+}
+
+.toggle-btn {
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  margin-right: 15px;
+
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    position: fixed;
+    width: 70px;
+  }
+  .sidebar.collapsed {
+    width: 0;
+  }
+  .sidebar ul li span {
+    display: none;
+  }
+  .content {
+    margin-left: 70px;
+    padding: 80px 15px 30px 15px;
+  }
+  .content.collapsed {
+    margin-left: 0;
+  }
+}

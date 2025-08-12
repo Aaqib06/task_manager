@@ -1,0 +1,125 @@
+/* public/css/auth.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  color: #444;
+}
+
+.auth-card {
+  background: #fff;
+  padding: 40px 35px;
+  border-radius: 15px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+  max-width: 400px;
+  width: 100%;
+  transition: transform 0.3s ease;
+}
+
+.auth-card:hover {
+  transform: translateY(-10px);
+}
+
+.auth-card h2 {
+  margin-bottom: 30px;
+  font-weight: 700;
+  color: #333;
+  text-align: center;
+  letter-spacing: 1.2px;
+  font-size: 2rem;
+}
+
+.form-label {
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #555;
+  display: block;
+}
+
+.form-control {
+  width: 100%;
+  padding: 12px 15px;
+  font-size: 1rem;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  transition: border-color 0.3s ease;
+  outline: none;
+}
+
+.form-control:focus {
+  border-color: #667eea;
+  box-shadow: 0 0 8px #667eea66;
+}
+
+.btn-primary {
+  background: #667eea;
+  border: none;
+  padding: 14px 0;
+  width: 100%;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  margin-top: 15px;
+}
+
+.btn-primary:hover {
+  background: #5a67d8;
+}
+
+.alert-success {
+  background: #d4edda;
+  border: 1px solid #c3e6cb;
+  color: #155724;
+  padding: 12px 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.text-danger {
+  font-size: 0.85rem;
+  margin-top: 5px;
+  display: block;
+  color: #d9534f;
+}
+
+.auth-link {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 0.95rem;
+  color: #666;
+}
+
+.auth-link a {
+  color: #667eea;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.auth-link a:hover {
+  color: #5a67d8;
+  text-decoration: underline;
+}
+
+@media (max-width: 480px) {
+  .auth-card {
+    padding: 30px 25px;
+  }
+
+  .auth-card h2 {
+    font-size: 1.6rem;
+  }
+}
